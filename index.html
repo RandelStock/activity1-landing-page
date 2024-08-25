@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0409a06870.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--------------Navigation Bar--------------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="title">Hero</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Hero</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Hello I'm...</p>
+                <h1><span>Randel Jonh Lontok</span> <br>A BSIT Student From <br>Dalubhasaang Lungsod <br>ng Lucena</h1>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!--------------About Me--------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+
+                    <h1 class="sub-title">About</h1>
+                    
+                    <p>Web development is the process of creating websites that allow users to view and interact with content over the Internet.
+
+                        <br><br>Web development includes many different aspects, including the creation of a websites design and code to create a functioning website.</p>
+                        <br>
+                    
+                    <h1 class="sub-title">Importance Of <br>Web Development</h1>
+                        
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('one')">Brings Businesses to Life</p>
+                            <p class="tab-links" onclick="opentab('two')" >Building Relationships With Customers</p>
+                            <p class="tab-links" onclick="opentab('three')">Creating Leads and Sales</p>
+                        </div>
+
+                        <br><br>
+
+                        <div class="tab-contents active-tab" id="one">
+                            <p>Web development is a critical part of bringing business ideas to life. <br><br>
+                                In the 21st century, a solid web presence is essential for any business.
+                                This is because it gives potential customers a glimpse into the companys culture and values,whilst also helping with branding and marketing. 
+                                <br><br>It also provides customers with a consistent experience across different platforms.
+                    
+                            </p>
+                        </div>
+
+                        <div class="tab-contents" id="two">
+                            <p>Web development is important for building relationships with customers because it allows you to meet your customers needs in a way that makes sense to them. <br><br>
+                                If your website isnt easy to use, if it looks outdated, or if it doesnt do what you promised it would do, then you may lose the trust of your customers. 
+                                <br><br>
+                                However, if you have a great website that meets all of their needs and has features theyre excited about, then theyre going to come back again and again. 
+                            </p>
+                        </div>
+
+                        <div class="tab-contents" id="three">
+                            <p>Web development is important for creating more leads and sales because it makes it easy for customers to find your business online.  <br><br>
+                                If you dont have a website, then people cant find you when they go looking, and theyll probably just go somewhere else. 
+                                <br><br> 
+                                This can be especially problematic if youre trying to reach out to a new demographic or appeal to a new market.
+                            </p>
+                        </div>
+                 </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <!----------------Tools------------------>
+
+    <div id="tools">
+        <div class="container">
+            <h1 class="sub-title">Tool For Web Development</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>Html</h2>
+                    <p> HTML is the standard markup language used for creating and structuring content on the web. It defines the structure and layout of a web page using elements like headings, paragraphs, links, images, and other multimedia.</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h2>Css</h2>
+                    <p>Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.</p>
+                    <a href="https://www.w3schools.com/css/">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-js"></i>
+                    <h2>JavaScipt</h2>
+                    <p>JavaScript is a versatile, high-level programming language primarily used to create interactive and dynamic content on websites.</p>
+                    <a href="https://devdocs.io/javascript/">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>Copyright ©️ RJL</p>
+        </div>
+    </div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+
+</body>
+</html> 
